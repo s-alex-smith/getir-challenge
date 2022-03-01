@@ -1,6 +1,32 @@
 import React, { useState } from "react";
 import styled from "styled-components/macro";
-import { func } from 'prop-types';
+
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+`
+
+const StyledButton = styled.button`
+    color: white;
+    font-size: 1em;
+    padding: 0.25em 1em;
+    border-radius: 0.5em;
+    background-color: #202020;
+    width: 9em;
+    height: 2.5em;
+`
+
+const StyledInput = styled.input`
+    height: 2.5em;
+    width: 20%;
+    margin-right: 3em;
+    border-radius: 0.5em;
+    color: white;
+    background-color: #202020;
+`
 
 const AddToDoItem = ({ clickAdd }) => {
     const [input, setInput] = useState("")
@@ -9,32 +35,22 @@ const AddToDoItem = ({ clickAdd }) => {
         setInput(input.target.value);
       };
 
-      const handleAddTodo = () => {
-        // this.props.addTodo(this.state.input);
-        // addItem({action: item, completed: false})
-        // setInput("");
+      const handleClickAddTodo = () => {
         clickAdd(input)
+        setInput("")
       };
 
     return(
-        <>
-            <input
+        <StyledContainer>
+            <StyledInput
                 onChange={updateInput}
                 value={input} type="text"
             />
-            <button className="add-todo" onClick={handleAddTodo}>
+            <StyledButton className="add-todo" onClick={handleClickAddTodo}>
                 Add Todo
-            </button>
-        </>
+            </StyledButton>
+        </StyledContainer>
     )
 }
-
-AddToDoItem.propTypes = {
-    clickClone: func
-    }
-    
-AddToDoItem.defaultPtops = {
-      clickClone: () => {}
-    }
 
 export default AddToDoItem
