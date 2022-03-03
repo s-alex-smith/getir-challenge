@@ -14,18 +14,21 @@ const StyledButton = styled.button`
     font-size: 1em;
     padding: 0.25em 1em;
     border-radius: 0.5em;
-    background-color: #202020;
+    background-color: #0A369D;
+    border: 0.2em solid #0A369D;
     width: 9em;
-    height: 2.5em;
+    height: 2em;
 `
 
 const StyledInput = styled.input`
-    height: 2.5em;
+    height: 2em;
+    font-weight: bold;
     width: 20%;
     margin-right: 3em;
+    border: 0.2em solid #0A369D;
     border-radius: 0.5em;
-    color: white;
-    background-color: #202020;
+    color: #0A369D;
+    background-color: #CFDEE7;
 `
 
 const AddToDoItem = ({ clickAdd }) => {
