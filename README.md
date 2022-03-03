@@ -2,6 +2,9 @@
 
 A simple app built using react that uses axios to access json data hosted on a my-json-server and displays the information in the form of a list. Each item is initially shown as 'To do', but can be toggled, with the use of Redux, to show as completed. New items can be added to the list, as well as individually removed from the list. There are also four sort buttons, allowing the user to order the list alphabetically (a-z and z-a) by the action, and also sorted by status.
 
+The app is available here:
+https://getir-react-todo.herokuapp.com/
+
 ## Installation
 
 Fork this repo and use the following command in your terminal:
