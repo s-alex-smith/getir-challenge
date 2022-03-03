@@ -18,6 +18,12 @@ const StyledButton = styled.button`
     border: 0.2em solid #0A369D;
     width: 9em;
     height: 2em;
+    &:hover {
+    background-color: #04236C;
+  }
+  &:active {
+      background-color: #1E4CB8;
+  }
 `
 
 const StyledInput = styled.input`
@@ -25,29 +31,41 @@ const StyledInput = styled.input`
     font-weight: bold;
     width: 20%;
     margin-right: 3em;
-    border: 0.2em solid #0A369D;
     border-radius: 0.5em;
     color: #0A369D;
     background-color: #CFDEE7;
+    border: ${props => props.error ? '0.2em solid #A31621' : '0.2em solid #0A369D'};
 `
 
 const AddToDoItem = ({ clickAdd }) => {
     const [input, setInput] = useState("")
-
+    const [placeholder, setPlaceholder] = useState("")
+    const [error, setError] = useState(false)
+ 
     const updateInput = input => {
         setInput(input.target.value);
       };
 
       const handleClickAddTodo = () => {
-        clickAdd(input)
-        setInput("")
+        if (input.length === 0) {
+            setError(true)
+            setPlaceholder("Please enter an item")
+        } else {
+            setError(false)
+            setPlaceholder("")
+            clickAdd(input)
+            setInput("")
+        }
       };
 
     return(
         <StyledContainer>
             <StyledInput
                 onChange={updateInput}
-                value={input} type="text"
+                value={input} 
+                type="text"
+                placeholder={placeholder}
+                error={error}
             />
             <StyledButton className="add-todo" onClick={handleClickAddTodo}>
                 Add Todo

@@ -19,6 +19,12 @@ const StyledButton = styled.button`
     border: 0.2em solid #0A369D;
     width: 9em;
     height: 1.5em;
+    &:hover {
+    background-color: #04236C;
+  }
+  &:active {
+      background-color: #1E4CB8;
+  }
 `
 
 const Sort = ({sortList}) => {

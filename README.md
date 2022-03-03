@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+# Getir Challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple app built using react that uses axios to access json data hosted on a my-json-server and displays the information in the form of a list. Each item is initially shown as 'To do', but can be toggled, with the use of Redux, to show as completed. New items can be added to the list, as well as individually removed from the list. There are also four sort buttons, allowing the user to order the list alphabetically (a-z and z-a) by the action, and also sorted by status.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+Fork this repo and use the following command in your terminal:
 
-### `npm start`
+```
+  git clone https://github.com/s-alex-smith/getir-challenge
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Once open, install the necessary dependencies by using the following:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+npm install
+```
 
-### `npm test`
+To run the project locally, use the following command:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+npm start
+```
 
-### `npm run build`
+You will now be able to run the project locally on your desktop.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Future improvements
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project was built within a time constraint, and so some functionality may not be as developed as I would normally like, for instance:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- add unit tests
+- add filter function
+- accommodate different screen sizes
+- as the app grows a loader could be shown while processing a GET or POST request
 
-### `npm run eject`
+### Complications
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This was my first attempt at utilising Redux, and I admit I struggled balancing the state between Redux and the GET request. This was made more difficult by not being able to able to add, or update, items on the server (as it is just a mock) and I struggled to use Redux to filter the list as a result.

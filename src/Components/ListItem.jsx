@@ -32,6 +32,12 @@ const StyledButton = styled.button`
     border: 0.1em solid #CFDEE7;
     width: 8em;
     height: 2em;
+    &:hover {
+    background-color: #04236C;
+  }
+  &:active {
+      background-color: #1E4CB8;
+  }
 `
 
 const StyledButtonContainer = styled.span`
@@ -43,6 +49,13 @@ const StyledRemoveButton = styled.button`
     border: 0.1em solid #0A369D;
     color: #0A369D;
     font-weight: bold;
+    &:hover {
+    background-color: #93A1AB;
+  }
+  &:active {
+      background-color: #A31621;
+      color: white;
+  }
 `
 
 const ListItem = ({action, completed, index}) => {
