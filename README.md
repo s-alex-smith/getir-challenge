@@ -33,6 +33,7 @@ This project was built within a time constraint, and so some functionality may n
 
 - add unit tests
 - add filter function
+- add author input to filter by author
 - accommodate different screen sizes
 - as the app grows a loader could be shown while processing a GET or POST request
 
